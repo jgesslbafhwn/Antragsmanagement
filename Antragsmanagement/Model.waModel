@@ -1,491 +1,583 @@
-﻿{
-	"toJSON": true,
-	"extraProperties": {
-		"version": "2",
-		"classes": {
-			"Application": {
-				"panelColor": "#B8CCE4",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": true,
-					"position": {
-						"X": 54,
-						"Y": 24
+
+{
+	"toJSON" : true,
+	"extraProperties" : 
+	{
+		"version" : "2",
+		"classes" : 
+		{
+			"Application" : 
+			{
+				"panelColor" : "#B8CCE4",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 54,
+						"Y" : 24
 					}
 				}
 			},
-			"Applicationtype": {
-				"panelColor": "#fff",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": true,
-					"position": {
-						"X": 446,
-						"Y": 31
+			"Applicationtype" : 
+			{
+				"panelColor" : "#fff",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 446,
+						"Y" : 31
 					}
 				}
 			},
-			"Programm": {
-				"panelColor": "#C4BD97",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": false,
-					"position": {
-						"X": 100,
-						"Y": 399
+			"Programm" : 
+			{
+				"panelColor" : "#C4BD97",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 62,
+						"Y" : 357
 					}
 				}
 			},
-			"Programmtype": {
-				"panelColor": "#C3D69B",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": true,
-					"position": {
-						"X": 487,
-						"Y": 404
+			"Programmtype" : 
+			{
+				"panelColor" : "#C3D69B",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 487,
+						"Y" : 404
 					}
 				}
 			},
-			"Applicationhistory": {
-				"panelColor": "#D8D8D8",
-				"panel": {
-					"isOpen": "true",
-					"pathVisible": false,
-					"position": {
-						"X": 476,
-						"Y": 31
+			"Applicationhistory" : 
+			{
+				"panelColor" : "#D8D8D8",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : false,
+					"position" : 
+					{
+						"X" : 476,
+						"Y" : 31
 					}
 				}
 			},
-			"Applicationstate": {
-				"panelColor": "#4FA997",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": false,
-					"position": {
-						"X": 802,
-						"Y": 36
+			"Applicationstate" : 
+			{
+				"panelColor" : "#4FA997",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : false,
+					"position" : 
+					{
+						"X" : 802,
+						"Y" : 36
 					}
 				}
 			},
-			"User": {
-				"panelColor": "#E5B9B7",
-				"panel": {
-					"isOpen": "false",
-					"pathVisible": true,
-					"position": {
-						"X": 509,
-						"Y": 381
+			"User" : 
+			{
+				"panelColor" : "#E5B9B7",
+				"panel" : 
+				{
+					"isOpen" : "false",
+					"pathVisible" : true,
+					"position" : 
+					{
+						"X" : 509,
+						"Y" : 381
 					}
 				}
 			}
 		},
-		"model": {
-			"scriptMode": "manual",
-			"workspaceLeft": 0,
-			"workspaceTop": 0,
-			"lastScriptLocation": {
-				"User": {
-					"computed": "User/User-events.js"
+		"model" : 
+		{
+			"scriptMode" : "manual",
+			"workspaceLeft" : 0,
+			"workspaceTop" : 0,
+			"lastScriptLocation" : 
+			{
+				"User" : 
+				{
+					"computed" : "User/User-events.js"
 				},
-				"Applicationhistory": {
-					"events": "Applicationhistory/Applicationhistory-events.js"
+				"Applicationhistory" : 
+				{
+					"events" : "Applicationhistory/Applicationhistory-events.js"
 				}
 			}
 		}
 	},
-	"dataClasses": [
+	"dataClasses" : 
+	[
 		{
-			"name": "Application",
-			"className": "Application",
-			"collectionName": "ApplicationCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Application",
+			"className" : "Application",
+			"collectionName" : "ApplicationCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "type",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Applicationtype",
-					"path": "Applicationtype"
+					"name" : "type",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Applicationtype",
+					"path" : "Applicationtype"
 				},
 				{
-					"name": "history",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ApplicationhistoryCollection",
-					"reversePath": true,
-					"path": "application"
+					"name" : "history",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ApplicationhistoryCollection",
+					"reversePath" : true,
+					"path" : "application"
 				},
 				{
-					"name": "programm",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Programm",
-					"path": "Programm"
+					"name" : "programm",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Programm",
+					"path" : "Programm"
 				},
 				{
-					"name": "programmName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "programm.name"
+					"name" : "programmName",
+					"kind" : "alias",
+					"scope" : "public",
+					"type" : "string",
+					"path" : "programm.name"
 				},
 				{
-					"name": "rerenceNumber",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"type": "string",
-					"identifying": true
+					"name" : "rerenceNumber",
+					"kind" : "storage",
+					"scope" : "public",
+					"unique" : true,
+					"type" : "string",
+					"identifying" : true
 				},
 				{
-					"name": "applicant",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
+					"name" : "applicant",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "User",
+					"path" : "User"
 				},
 				{
-					"name": "applicantName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "applicant.fullName"
-				}
-			]
-		},
-		{
-			"name": "Applicationhistory",
-			"className": "Applicationhistory",
-			"collectionName": "ApplicationhistoryCollection",
-			"scope": "public",
-			"attributes": [
-				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
-				},
-				{
-					"name": "historyNumber",
-					"kind": "storage",
-					"scope": "public",
-					"type": "number"
-				},
-				{
-					"name": "title",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "date",
-					"kind": "storage",
-					"scope": "public",
-					"type": "date",
-					"simpleDate": false
-				},
-				{
-					"name": "state",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Applicationstate",
-					"path": "Applicationstate"
-				},
-				{
-					"name": "comment",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
-				},
-				{
-					"name": "application",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Application",
-					"path": "Application"
-				},
-				{
-					"name": "document",
-					"kind": "storage",
-					"scope": "public",
-					"type": "blob"
-				},
-				{
-					"name": "user",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "userFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "user.fullName"
+					"name" : "applicantName",
+					"kind" : "alias",
+					"scope" : "public",
+					"type" : "string",
+					"path" : "applicant.fullName"
 				}
 			],
-			"events": [
+			"key" : 
+			[
 				{
-					"kind": "onSave",
-					"from": "model.Applicationhistory.events.onSave",
-					"userDefined": true
-				},
-				{
-					"kind": "onInit",
-					"from": "model.Applicationhistory.events.onInit"
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Applicationstate",
-			"className": "Applicationstate",
-			"collectionName": "ApplicationstateCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Applicationhistory",
+			"className" : "Applicationhistory",
+			"collectionName" : "ApplicationhistoryCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "historyNumber",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "number"
 				},
 				{
-					"name": "history",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ApplicationhistoryCollection",
-					"reversePath": true,
-					"path": "state"
+					"name" : "title",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "date",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "date",
+					"simpleDate" : false
+				},
+				{
+					"name" : "state",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Applicationstate",
+					"path" : "Applicationstate"
+				},
+				{
+					"name" : "comment",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "application",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Application",
+					"path" : "Application"
+				},
+				{
+					"name" : "document",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "blob"
+				},
+				{
+					"name" : "user",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "User",
+					"path" : "User"
+				},
+				{
+					"name" : "userFullName",
+					"kind" : "alias",
+					"scope" : "public",
+					"type" : "string",
+					"path" : "user.fullName"
+				}
+			],
+			"events" : 
+			[
+				{
+					"kind" : "onSave",
+					"from" : "model.Applicationhistory.events.onSave",
+					"userDefined" : true
+				},
+				{
+					"kind" : "onInit",
+					"from" : "model.Applicationhistory.events.onInit"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Applicationtype",
-			"className": "Applicationtype",
-			"collectionName": "ApplicationtypeCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Applicationstate",
+			"className" : "Applicationstate",
+			"collectionName" : "ApplicationstateCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "name",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "applications",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ApplicationCollection",
-					"reversePath": true,
-					"path": "type"
+					"name" : "history",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ApplicationhistoryCollection",
+					"reversePath" : true,
+					"path" : "state"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Programm",
-			"className": "Programm",
-			"collectionName": "ProgrammCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Applicationtype",
+			"className" : "Applicationtype",
+			"collectionName" : "ApplicationtypeCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "name",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "type",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "Programmtype",
-					"path": "Programmtype"
-				},
+					"name" : "applications",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ApplicationCollection",
+					"reversePath" : true,
+					"path" : "type"
+				}
+			],
+			"key" : 
+			[
 				{
-					"name": "programmHead",
-					"kind": "relatedEntity",
-					"scope": "public",
-					"type": "User",
-					"path": "User"
-				},
-				{
-					"name": "programmHeadFullName",
-					"kind": "alias",
-					"scope": "public",
-					"type": "string",
-					"path": "programmHead.fullName"
-				},
-				{
-					"name": "applications",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ApplicationCollection",
-					"reversePath": true,
-					"path": "programm"
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "Programmtype",
-			"className": "Programmtype",
-			"collectionName": "ProgrammtypeCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Programm",
+			"className" : "Programm",
+			"collectionName" : "ProgrammCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "name",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "name",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "programms",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ProgrammCollection",
-					"reversePath": true,
-					"path": "type"
+					"name" : "type",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "Programmtype",
+					"path" : "Programmtype"
+				},
+				{
+					"name" : "programmHead",
+					"kind" : "relatedEntity",
+					"scope" : "public",
+					"type" : "User",
+					"path" : "User"
+				},
+				{
+					"name" : "programmHeadFullName",
+					"kind" : "alias",
+					"scope" : "public",
+					"type" : "string",
+					"path" : "programmHead.fullName"
+				},
+				{
+					"name" : "applications",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ApplicationCollection",
+					"reversePath" : true,
+					"path" : "programm"
+				},
+				{
+					"name" : "registrationNumber",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		},
 		{
-			"name": "User",
-			"className": "User",
-			"collectionName": "UserCollection",
-			"scope": "public",
-			"attributes": [
+			"name" : "Programmtype",
+			"className" : "Programmtype",
+			"collectionName" : "ProgrammtypeCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
 				{
-					"name": "ID",
-					"kind": "storage",
-					"scope": "public",
-					"unique": true,
-					"autosequence": true,
-					"type": "long",
-					"primKey": true
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "firstName",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "name",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "lastName",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "programms",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ProgrammCollection",
+					"reversePath" : true,
+					"path" : "type"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
+				}
+			]
+		},
+		{
+			"name" : "User",
+			"className" : "User",
+			"collectionName" : "UserCollection",
+			"scope" : "public",
+			"attributes" : 
+			[
+				{
+					"name" : "ID",
+					"kind" : "storage",
+					"scope" : "public",
+					"indexed" : true,
+					"unique" : true,
+					"autosequence" : true,
+					"type" : "long",
+					"indexKind" : "btree"
 				},
 				{
-					"name": "fullName",
-					"kind": "calculated",
-					"scope": "public",
-					"type": "string",
-					"scriptKind": "javascript",
-					"onGet": [
+					"name" : "firstName",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "lastName",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
+				},
+				{
+					"name" : "fullName",
+					"kind" : "calculated",
+					"scope" : "public",
+					"type" : "string",
+					"scriptKind" : "javascript",
+					"onGet" : 
+					[
 						{
-							"from": "model.User.fullName.onGet",
-							"userDefined": true
+							"from" : "model.User.fullName.onGet",
+							"userDefined" : true
 						}
 					]
 				},
 				{
-					"name": "academicDegreeFront",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "academicDegreeFront",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "academicDegreeBack",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "academicDegreeBack",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "email",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "email",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "gender",
-					"kind": "storage",
-					"scope": "public",
-					"type": "string"
+					"name" : "gender",
+					"kind" : "storage",
+					"scope" : "public",
+					"type" : "string"
 				},
 				{
-					"name": "programmHeads",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ProgrammCollection",
-					"reversePath": true,
-					"path": "programmHead"
+					"name" : "programmHeads",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ProgrammCollection",
+					"reversePath" : true,
+					"path" : "programmHead"
 				},
 				{
-					"name": "applicationhistoies",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ApplicationhistoryCollection",
-					"reversePath": true,
-					"path": "user"
+					"name" : "applicationhistoies",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ApplicationhistoryCollection",
+					"reversePath" : true,
+					"path" : "user"
 				},
 				{
-					"name": "applications",
-					"kind": "relatedEntities",
-					"scope": "public",
-					"type": "ApplicationCollection",
-					"reversePath": true,
-					"path": "applicant"
+					"name" : "applications",
+					"kind" : "relatedEntities",
+					"scope" : "public",
+					"type" : "ApplicationCollection",
+					"reversePath" : true,
+					"path" : "applicant"
+				}
+			],
+			"key" : 
+			[
+				{
+					"name" : "ID"
 				}
 			]
 		}
-	],
-	"type": []
+	]
 }
