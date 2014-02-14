@@ -175,7 +175,6 @@
 					"name" : "rerenceNumber",
 					"kind" : "storage",
 					"scope" : "public",
-					"indexed" : true,
 					"unique" : true,
 					"type" : "string",
 					"identifying" : true

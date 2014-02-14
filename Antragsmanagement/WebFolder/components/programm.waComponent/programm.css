@@ -3,6 +3,28 @@
 	Changes to this CSS file might be lost when it is regenerated.
 */
 
+#{id}combobox2 {
+	 z-index: 4;
+	 width: 164px;
+	 height: 24px;
+	 top: 105px;
+	 left: 125px;
+	
+	 position: absolute;
+	 
+}
+
+#{id}label4 {
+	 z-index: 4;
+	 width: 29px;
+	 height: 13px;
+	 top: 110.5px;
+	 left: 91px;
+	
+	 position: absolute;
+	 
+}
+
 #{id}container2 {
 	 z-index: 11;
 	 width: 433px;
@@ -18,7 +40,7 @@
 	 z-index: 1;
 	 width: 24px;
 	 height: 24px;
-	 top: 1px;
+	 top: 0px;
 	 left: 28px;
 	
 	 position: absolute;
@@ -29,7 +51,7 @@
 	 z-index: 1;
 	 width: 44px;
 	 height: 13px;
-	 top: 30px;
+	 top: 29px;
 	 left: 18px;
 	
 	 text-align: center;
@@ -52,8 +74,8 @@
 	 z-index: 4;
 	 width: 450px;
 	 height: 300px;
-	 top: 5px;
-	 left: 7px;
+	 top: 0px;
+	 left: 0px;
 	
 	 position: absolute;
 	 
@@ -63,7 +85,7 @@
 	 z-index: 1;
 	 width: 24px;
 	 height: 24px;
-	 top: 1px;
+	 top: 0px;
 	 left: 28px;
 	
 	 position: absolute;
@@ -74,7 +96,7 @@
 	 z-index: 1;
 	 width: 25px;
 	 height: 13px;
-	 top: 30px;
+	 top: 29px;
 	 left: 27.5px;
 	
 	 text-align: center;
@@ -101,7 +123,7 @@
 	 z-index: 1;
 	 width: 24px;
 	 height: 24px;
-	 top: 1px;
+	 top: 0px;
 	 left: 28px;
 	
 	 position: absolute;
@@ -112,7 +134,7 @@
 	 z-index: 1;
 	 width: 25px;
 	 height: 13px;
-	 top: 30px;
+	 top: 29px;
 	 left: 27.5px;
 	
 	 text-align: center;
@@ -135,7 +157,7 @@
 	 z-index: 1;
 	 width: 24px;
 	 height: 24px;
-	 top: 1px;
+	 top: 0px;
 	 left: 28px;
 	
 	 position: absolute;
@@ -146,7 +168,7 @@
 	 z-index: 1;
 	 width: 26px;
 	 height: 13px;
-	 top: 30px;
+	 top: 29px;
 	 left: 27px;
 	
 	 text-align: center;
@@ -169,7 +191,7 @@
 	 z-index: 1;
 	 width: 24px;
 	 height: 24px;
-	 top: 1px;
+	 top: 0px;
 	 left: 28px;
 	
 	 position: absolute;
@@ -180,7 +202,7 @@
 	 z-index: 1;
 	 width: 47px;
 	 height: 13px;
-	 top: 30px;
+	 top: 29px;
 	 left: 16.5px;
 	
 	 position: absolute;
@@ -249,7 +271,7 @@
 	 z-index: 3;
 	 width: 472px;
 	 height: 296px;
-	 top: 5px;
+	 top: 0px;
 	 left: 483px;
 	
 	 position: absolute;
